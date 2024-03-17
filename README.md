@@ -1,38 +1,5 @@
-# FdF
 
 ![Title_Image](images/title.png)
-
-The goal of this project was to represent any given heightmap as a wireframe model in isometric view using the [MLX42](https://github.com/codam-coding-college/MLX42) library.
-
----
-
-<div style="text-align: center; display: flex; flex-wrap: wrap;">
-<div style="min-width:max-content; margin-right: 25px;">
-
-Heightmap text file:
-```
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-0 0 1 1 0 0 1 1 0 0 0 1 1 1 1 1 0 0 0
-0 0 1 1 0 0 1 1 0 0 0 0 0 0 0 1 1 0 0
-0 0 1 1 0 0 1 1 0 0 0 0 0 0 0 1 1 0 0
-0 0 1 1 1 1 1 1 0 0 0 0 1 1 1 1 0 0 0
-0 0 0 1 1 1 1 1 0 0 0 1 1 0 0 0 0 0 0
-0 0 0 0 0 0 1 1 0 0 0 1 1 0 0 0 0 0 0
-0 0 0 0 0 0 1 1 0 0 0 1 1 1 1 1 1 0 0
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-```
-</div>
-<div>
-<div style="text-align: center;">Graphical representation:<br><br></div>
-
-![Alt text](images/mandatory.png)
-
-</div>
-</div>
-
----
 
 # Dependencies
 
@@ -91,26 +58,6 @@ make
 
 ---
 
-# Bonus Features
-
-- Free mesh rotation and zoom
-- Perspective projection and adjustable Field of View
-- Antialiased lines
-- Adjustable line thickness (no Antialiasing)
-- Skybox environment
-- Color gradient from lowest to highest point
-- Ability to load PNG heightmaps
-- Ability to load PNG colormaps
-- FPS display (frames per second)
-- Additional draw modes:
-	- Vertices only (adjustable vertex size)
-	- Dotted edges (adjustable dot size)
-	- Edges
-	- Faces
-	- Faces and edges
-
----
-
 # Controls
 
 ### Universal Controls:
@@ -141,6 +88,7 @@ make
 | <kbd>3</kbd>								| Draw edges										|
 | <kbd>4</kbd>								| Draw faces										|
 | <kbd>5</kbd>								| Draw faces and edges								|
+| <kbd>6</kbd>								| Draw skybox/background only						|
 
 ### Edge Mode Controls: ( <kbd>4</kbd> )
 
@@ -168,3 +116,70 @@ make
 
 
 $\color{red}*$ *Only use on small maps! Might freeze the program.*
+
+# Description
+
+The goal of this project was to represent any given heightmap as a wireframe model in isometric view using the [MLX42](https://github.com/codam-coding-college/MLX42) library.
+
+| Heightmap text file						| Graphical representation:⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀	|
+|-------------------------------------------|---------------------------------------------------|
+| ![](images/text.png)						| ![](images/mandatory.png)							|
+
+The bonus task was to add an additional projection, add the ability to zoom, translate and rotate the model. Since I really enjoyed this project, I decided to add many more features like colors and antialiasing.
+
+![](images/1.png)
+
+Next, I added a FPS display and some alternative draw modes to represent the heightmap in different ways.
+
+![](images/3.png)
+
+![](images/2.png)
+
+I decided to add the ability to load PNG heightmaps in order to get more interesting models. In addition to the heightmap, a diffuse/colormap can also be read to assign the respective color to each vertex.
+
+![](images/6.png)
+
+![](images/4.png)
+
+In order to complete the environment, I also added a skybox
+
+![](images/5.png)
+
+---
+
+# Bonus Features
+
+- Free mesh rotation and zoom
+- Perspective projection and adjustable Field of View
+- Antialiased lines
+- Adjustable height scale
+- Skybox environment
+- Color gradient from lowest to highest point
+- Ability to load PNG heightmaps and colormaps
+- FPS display (frames per second)
+- Additional draw modes:
+	- Vertices only
+	- Dotted edges
+	- Edges
+	- Faces
+	- Faces and edges
+
+---
+
+# Assets
+
+#### Skyboxes
+
+[Sky 2 by Antoan Shiyachki](https://design.tutsplus.com/articles/freebie-8-awesome-ocean-hdris--cg-5684) \
+[Sky 3 by komaokc](https://gamebanana.com/mods/7269)
+
+#### Heightmaps
+
+[Alien by Artem Polovianov](https://www.artstation.com/marketplace/p/d507g/alien-landscape-vol-2-30-terrain-mesh-displacement-map-texture-pack/) \
+[Foggy and Crater by Ozhichige](https://ozhichige.gumroad.com/l/WragC)
+
+#### Materials
+
+[Mud by Dario Barresi and Dimitrios Savva](https://polyhaven.com/a/mud_cracked_dry_03) \
+[Cobblestone by Sơn Nguyễn](https://polyhaven.com/a/mossy_cobblestone) \
+[Pebbles by Amal Kumar](https://polyhaven.com/a/ganges_river_pebbles)
