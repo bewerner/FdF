@@ -45,6 +45,8 @@ obj/%.o: src/%.c
 $(MLX42):
 	echo "$(COL_YELLOW)Cloning MLX42...$(COL_DEFAULT)"
 	git clone https://github.com/codam-coding-college/MLX42.git > /dev/null
+	echo "$(COL_YELLOW)Switching to latest known-to-work branch...$(COL_DEFAULT)"
+	cd MLX42 && git checkout ca0f163 || > /dev/null
 	echo "$(COL_YELLOW)Building MLX42...$(COL_DEFAULT)"
 	cmake -B MLX42/build -S MLX42 > /dev/null && make -C MLX42/build -j4 > /dev/null ||\
 	(echo "\n$(COL_RED)Looks like an ERROR has occured!$(COL_DEFAULT)\n$(COL_YELLOW)Please refer to the \
