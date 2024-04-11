@@ -13,11 +13,13 @@ sudo apt install cmake build-essential libx11-dev libglfw3-dev libglfw3 xorg-dev
 #### Arch (x11)
 ```
 sudo pacman -S glfw-x11
+sudo pacman -S cmake
 ```
 
 #### Arch (wayland)
 ```
 sudo pacman -S glfw-wayland
+sudo pacman -S cmake
 ```
 
 #### MacOS
