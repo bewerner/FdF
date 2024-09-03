@@ -1,6 +1,53 @@
 
 ![Title_Image](images/title.png)
 
+# Description
+
+The goal of this project was to represent any given heightmap as a wireframe model in isometric view using the [MLX42](https://github.com/codam-coding-college/MLX42) library.
+
+| Heightmap text file						| Graphical representation:⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀	|
+|-------------------------------------------|---------------------------------------------------|
+| ![](images/text.png)						| ![](images/mandatory.png)							|
+
+The bonus task was to add an additional projection, add the ability to zoom, translate and rotate the model. Since I really enjoyed this project, I decided to add many more features like colors and antialiasing.
+
+![](images/1.png)
+
+Next, I added a FPS display and some alternative draw modes to represent the heightmap in different ways.
+
+![](images/3.png)
+
+![](images/2.png)
+
+I decided to add the ability to load PNG heightmaps in order to get more interesting models. In addition to the heightmap, a diffuse/colormap can also be read to assign the respective color to each vertex.
+
+![](images/6.png)
+
+![](images/4.png)
+
+In order to complete the environment, I also added a skybox
+
+![](images/5.png)
+
+---
+
+# Bonus Features
+
+- Free mesh rotation and zoom
+- Perspective projection and adjustable Field of View
+- Antialiased lines
+- Adjustable height scale
+- Skybox environment
+- Color gradient from lowest to highest point
+- Ability to load PNG heightmaps and colormaps
+- FPS display (frames per second)
+- Additional draw modes:
+	- Vertices only
+	- Dotted edges
+	- Edges
+	- Faces
+	- Faces and edges
+
 # Dependencies
 
 
@@ -118,53 +165,6 @@ make
 
 
 $\color{red}*$ *Only use on small maps! Might freeze the program.*
-
-# Description
-
-The goal of this project was to represent any given heightmap as a wireframe model in isometric view using the [MLX42](https://github.com/codam-coding-college/MLX42) library.
-
-| Heightmap text file						| Graphical representation:⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀	|
-|-------------------------------------------|---------------------------------------------------|
-| ![](images/text.png)						| ![](images/mandatory.png)							|
-
-The bonus task was to add an additional projection, add the ability to zoom, translate and rotate the model. Since I really enjoyed this project, I decided to add many more features like colors and antialiasing.
-
-![](images/1.png)
-
-Next, I added a FPS display and some alternative draw modes to represent the heightmap in different ways.
-
-![](images/3.png)
-
-![](images/2.png)
-
-I decided to add the ability to load PNG heightmaps in order to get more interesting models. In addition to the heightmap, a diffuse/colormap can also be read to assign the respective color to each vertex.
-
-![](images/6.png)
-
-![](images/4.png)
-
-In order to complete the environment, I also added a skybox
-
-![](images/5.png)
-
----
-
-# Bonus Features
-
-- Free mesh rotation and zoom
-- Perspective projection and adjustable Field of View
-- Antialiased lines
-- Adjustable height scale
-- Skybox environment
-- Color gradient from lowest to highest point
-- Ability to load PNG heightmaps and colormaps
-- FPS display (frames per second)
-- Additional draw modes:
-	- Vertices only
-	- Dotted edges
-	- Edges
-	- Faces
-	- Faces and edges
 
 ---
 
