@@ -18,6 +18,10 @@ COL_DEFAULT	= 	\033[0m
 
 .SILENT:
 
+ifeq ($(shell uname -r | grep -oi microsoft), microsoft)
+ CFLAGS += -DCURSOR_SETTABLE=0
+endif
+
 all: $(MLX42) $(NAME)
 
 $(NAME): $(OBJ)
@@ -32,11 +36,6 @@ $(NAME): $(OBJ)
 	echo "$(COL_PINK)make mud        make pebbles     make cobblestone$(COL_DEFAULT)"
 	echo "\n$(COL_YELLOW)Please have a look at the $(COL_PINK)[$(COL_GREEN)README.md$(COL_PINK)]\
 	$(COL_YELLOW) to learn about all of the controls!$(COL_DEFAULT)\n"
-	@if [ "$(shell uname -r | grep -oi microsoft)" ]; then \
-		echo "\n$(COL_RED)It looks like you're using WSL (Windows Subsystem for Linux).";\
-		echo "The mouse cursor controls might not work properly with WSL.$(COL_YELLOW)";\
-		echo "In this case, press $(COL_PINK)Shift + W $(COL_YELLOW)to enable simpler but WSL compatible cursor controls$(COL_DEFAULT)\n";\
-	fi
 
 obj/%.o: src/%.c
 	mkdir -p obj

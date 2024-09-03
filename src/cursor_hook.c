@@ -47,8 +47,8 @@ void	cursor_hook(double cursor_x, double cursor_y, void *param)
 		s->mesh_pos.x += distance.x;
 		s->mesh_pos.y += distance.y;
 	}
-	if (s->wsl_mode)
-		s->initial_cursor_pos = (t_ivec2){cursor_x, cursor_y};
-	else
+	if (CURSOR_SETTABLE)
 		mlx_set_mouse_pos(s->mlx, s->initial_cursor_pos.x, s->initial_cursor_pos.y);
+	else
+		s->initial_cursor_pos = (t_ivec2){cursor_x, cursor_y};
 }

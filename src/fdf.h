@@ -6,7 +6,7 @@
 /*   By: bwerner <bwerner@student.42heilbronn.de>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/17 17:28:28 by bwerner           #+#    #+#             */
-/*   Updated: 2024/03/17 17:28:48 by bwerner          ###   ########.fr       */
+/*   Updated: 2024/09/03 05:13:25 by bwerner          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,10 @@
 # include <fcntl.h>
 # include <math.h>
 # include <sys/errno.h>
+
+# ifndef CURSOR_SETTABLE
+#  define CURSOR_SETTABLE 1
+# endif
 
 # define WINDOW_WIDTH	1024
 # define WINDOW_HEIGHT	1024
@@ -167,7 +171,6 @@ typedef struct s_FdF
 	int8_t		mouse_buttons_pressed;
 	double		foc;
 	double		camera_height;
-	int8_t		wsl_mode;
 }				t_FdF;
 
 //	cleanup.c

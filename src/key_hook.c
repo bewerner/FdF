@@ -130,6 +130,4 @@ void	key_hook(mlx_key_data_t keydata, void *param)
 		s->height_scale += 0.025;
 	else if (keydata.key == MLX_KEY_DOWN && keydata.action)
 		s->height_scale -= 0.025;
-	else if (keydata.key == MLX_KEY_W)
-		s->wsl_mode = 1;
 }
